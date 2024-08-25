@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+
+    <main>
+        <div class="container">
+            <div class="container__conteudo">
+                <h1 class="container__titulo">Decodificação de texto</h1>
+                <textarea id="input-text" placeholder="Digite seu texto aqui..." oninput="removeSpecialChars()"></textarea>
+            </div>
+            <div class="container__botoes">
+                <button onclick="criptografar()" class="container__botao">Criptografar</button>
+                <button onclick="descriptografar()" class="container__botao">Descriptografar</button>
+            </div>
+            <div class="container__informacoes">
+                <p class="container__informacoes__nota">Apenas letras minúsculas e sem acento.</p>
+            </div>
+            <div class="container__resultado">
+                <textarea id="output-text" readonly rows="10" cols="50">Nenhuma mensagem encontrada</textarea>
+            </div>
+            <div class="container__botoes" id="copiar-botao-container" style="display: none;">
+                <button onclick="copiarTexto()" class="container__botao">Copiar</button>
+            </div>
+        </div>
+    </main>
+    <footer class="rodape">
+        <h4>Desenvolvido por Emy Lima</h4>
+    </footer>
+
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
