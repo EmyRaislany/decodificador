@@ -40,12 +40,11 @@ function descriptografar() {
 
 function copiarTexto() {
     const outputText = document.getElementById("output-text");
-    outputText.select();
-    document.execCommand("copy");
-
-    outputText.value = "Nenhuma mensagem encontrada";
-    toggleCopiarBotao(false);
-    alert("Texto copiado para a área de transferência");
+    navigator.clipboard.writeText(outputText.value).then(() => {
+        outputText.value = "Nenhuma mensagem encontrada";
+        toggleCopiarBotao(false);
+        alert("Texto copiado para a área de transferência");
+    });
 }
 
 function toggleCopiarBotao(mostrar) {
